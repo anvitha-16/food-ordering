@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf3;
+    color: #35251d;
+}
+
+header {
+    background: #38251c;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffb347;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #ffb347;
+}
+
+.hero {
+    min-height: 420px;
+    background: linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+    ),
+    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.tagline {
+    color: #ffb347;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #e98b32;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #bd6821;
+}
+
+.menu-section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.subtitle {
+    color: #df8430;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.menu-section h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.description {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.categories {
+    margin-bottom: 45px;
+}
+
+.categories a {
+    display: inline-block;
+    text-decoration: none;
+    color: #593a27;
+    border: 1px solid #e5a15c;
+    padding: 10px 22px;
+    border-radius: 25px;
+    margin: 7px;
+}
+
+.categories a:hover {
+    background: #e98b32;
+    color: white;
+}
+
+.menu-section h3 {
+    text-align: left;
+    font-size: 25px;
+    margin: 35px 0 20px;
+    color: #593a27;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.food-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+.food-info span {
+    display: block;
+    margin-top: 15px;
+    color: #df8430;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.about {
+    background: #f4e4d2;
+    padding: 55px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+    color: #69594e;
+}
+
+footer {
+    background: #38251c;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+
+footer h2 {
+    color: #ffb347;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 7px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .food-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .food-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section {
+        padding: 45px 6%;
+    }
+}
